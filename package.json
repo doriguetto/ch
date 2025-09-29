@@ -5,8 +5,8 @@
   "description": "Starter project for Adobe Helix",
   "scripts": {
     "aem-up": "aem up",
-    "lint:js": "eslint . --ext .json,.js,.mjs",
-    "lint:css": "stylelint \"blocks/**/*.css\" \"styles/*.css\"",
+    "lint:js": "eslint src/ --ext .json,.js,.mjs",
+    "lint:css": "stylelint src/**/*.scss",
     "lint": "npm run lint:js && npm run lint:css",
     "lint:fix": "npm run lint:js -- --fix && npm run lint:css -- --fix",
     "build:json": "npm-run-all -p build:json:models build:json:definitions build:json:filters",
@@ -48,8 +48,8 @@
     "react": "^19.1.1",
     "react-dom": "^19.1.1",
     "sass-embedded": "^1.93.2",
-    "stylelint": "16.21.1",
-    "stylelint-config-standard": "38.0.0",
+    "stylelint": "^16.24.0",
+    "stylelint-config-standard-scss": "^16.0.0",
     "vite": "^7.1.7"
   }
 }

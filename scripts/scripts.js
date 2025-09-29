@@ -1,6 +1,6 @@
 import {
-  loadHeader,
-  loadFooter,
+  // loadHeader,
+  // loadFooter,
   decorateButtons,
   decorateIcons,
   decorateSections,
