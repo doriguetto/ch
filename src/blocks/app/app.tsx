@@ -4,13 +4,14 @@ import YoutubeSVG from '../../assets/youtube.svg?react';
 import coolImage from '../../assets/cool_image.png';
 import './app.scss';
 
+debugger
 const App = () => (
     <div className="app">IT WORKED!!!!
         <span>
             <YoutubeSVG/>
         </span>
         <span>
-            <img src={coolImage} alt="logo" />
+            <img src={window.hlx.codeBasePath + coolImage} alt="logo" />
         </span>
     </div>
 );
