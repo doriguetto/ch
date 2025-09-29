@@ -1,0 +1,85 @@
+// ==============================================================
+// VARIABLES
+// ==============================================================
+
+
+// Colours
+// ------------------------------
+$black: #000;
+$white: #fff;
+$grey-dark: #54585a;
+$grey-light: #C9C2BB;
+$grey-lighter: #f5f3f2;
+$grey-lightest: #e6e7e8;
+$green: #00b388;
+$green-light: #E5F7F3;
+$link-color: $green;
+$link-color-hover: $green-light;
+
+
+// Typography
+// ------------------------------
+$font-heading: "Replica-Pro-Bold", helvetica, arial, sans-serif;
+$font-body: 'Gotham SSm A', 'Gotham SSm B', helvetica, arial, sans-serif;
+$font-thin: 100;
+$font-light: 200;
+$font-normal: 400;
+$font-medium: 500;
+$font-semibold: 600;
+$font-bold: 700;
+$font-ultra-bold: 900;
+$font-size: 14px;
+$font-line-height: 1.5;
+$font-small-line-height: 1.1;
+$font-h1-size: 38px;
+$font-h2-size: 26px;
+$font-h3-size: 20px;
+$font-h4-size: 20px;
+$font-h5-size: 14px;
+
+
+// Transitions
+// ------------------------------
+$transition-timing: 0.7s;
+$lightbox-transition-timing: 1s;
+$transition-timing-slow: 1s;
+$transition-easing: cubic-bezier(0.25,1,.2,1);
+$default-transition: all 600ms $transition-easing;
+$popup-transition: all 300ms ease-in;
+
+
+// Spacing
+// ------------------------------
+$multicolumn-gutter: 40px;
+$multicolumn-margin: 40px;
+
+
+// Breakpoints
+// ------------------------------
+$screen-xl: 1500px; // LANDSCAPE
+$screen-xl-container: 885px;
+$screen-lg-padding: 80px;
+$screen-xl-aside: 500px;
+$screen-xl-min: $screen-xl;
+$screen-lg: 1200px; // LANDSCAPE
+$screen-lg-container: 885px;
+$screen-lg-padding: 70px;
+$screen-lg-aside: 400px;
+$screen-lg-min: $screen-lg;
+$screen-lg-max: ($screen-xl-min - 1);
+$screen-md: 992px; // LANDSCAPE
+$screen-md-container: 885px;
+$screen-md-padding: 70px;
+$screen-md-aside: 300px;
+$screen-md-min: $screen-md;
+$screen-md-max: ($screen-lg-min - 1);
+$screen-sm: 768px; // PORTRAIT
+$screen-sm-container: 700px;
+$screen-sm-padding: 40px;
+$screen-sm-min: $screen-sm;
+$screen-sm-max: ($screen-md-min - 1);
+$screen-xs: 480px;  // PORTRAIT
+$screen-xs-container: 100%;
+$screen-xs-padding: 30px;
+$screen-xs-min: $screen-xs;
+$screen-xs-max: ($screen-sm-min - 1);

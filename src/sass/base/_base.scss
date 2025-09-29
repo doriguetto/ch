@@ -1,0 +1,91 @@
+@use "@/sass/abstract/variables" as vars;
+
+// ==============================================================
+// GLOBAL
+// ==============================================================
+
+:focus {
+  outline:0 !important;
+}
+
+html {
+  height: 100%;
+}
+
+body {
+  display: flex;
+  min-height: 100vh;
+  flex-direction: column;
+}
+
+main {
+  flex: 1;
+
+  ul {
+    padding-left: 40px;
+    list-style: disc outside none;
+  }
+
+  @media all and (-ms-high-contrast:none) {
+    flex: none;
+  }
+
+  .page-template-page-simple & {
+    background: vars.$grey-lighter;
+    padding-bottom: 60px;
+
+    .container {
+      max-width: 650px;
+    }
+  }
+
+  .error404 & {
+    background: vars.$grey-lighter;
+
+    .container {
+      max-width: 650px;
+    }
+  }
+}
+
+a {
+  color: vars.$link-color;
+  text-decoration: none;
+  transition: vars.$default-transition;
+  font-weight: bold;
+
+  &:hover {
+    color: vars.$link-color;
+    text-decoration: underline;
+  }
+}
+
+img,svg {
+  max-width: 100%;
+  height: auto;
+
+  &.left {
+    float: left;
+    margin: 0 15px 13px 0;
+  }
+
+  &.right {
+    float: right;
+    margin: 0 0 13px 15px;
+  }
+}
+
+pre {
+  padding:30px;
+  margin-top:30px;
+  margin-bottom:30px;
+  background: #efefef;
+}
+
+.visible-xs {
+  display: block!important;
+
+  @media (min-width: vars.$screen-sm-min) {
+    display: none!important;
+  }
+}

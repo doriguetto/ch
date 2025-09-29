@@ -1,0 +1,49 @@
+@use "@/sass/abstract/variables" as vars;
+
+// ==============================================================
+// MIXINS
+// ==============================================================
+
+
+// Media queries
+// ------------------------------
+@mixin on-mobile-only {
+  @media (max-width: vars.$screen-sm-max) {
+    @content;
+  }
+}
+
+@mixin on-tablet-only {
+  @media (min-width: vars.$screen-sm) and (width <= 1023px) {
+    @content;
+  }
+}
+
+@mixin on-desktop-only {
+  @media (width >= 1024px) {
+    @content;
+  }
+}
+
+
+// Fixed ratios
+// ------------------------------
+@mixin fixed-ratio( $width, $height ) {
+  position: relative;
+  height: 0;
+
+  @include fixed-ratio-override( $width, $height );
+
+  > * {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    box-sizing: border-box;
+  }
+}
+
+@mixin fixed-ratio-override( $width, $height ) {
+  padding-bottom: ( $height / $width ) * 100%;
+}

@@ -1,0 +1,125 @@
+@use "@/sass/abstract/variables" as vars;
+
+html {
+  font-size: 14px;
+}
+
+body {
+  padding: 0;
+  margin: 0;
+  font-family: vars.$font-body;
+  font-size: vars.$font-size;
+  font-weight: vars.$font-normal;
+  line-height: vars.$font-line-height;
+  color: vars.$grey-dark;
+  outline: 0;
+  -webkit-font-smoothing: subpixel-antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+h1,.h1-size,
+h2,.h2-size,
+h3,.h3-size,
+h4,.h4-size,
+h5,.h5-size {
+  font-family: vars.$font-heading;
+  font-weight: vars.$font-normal;
+  line-height: vars.$font-small-line-height;
+  color: vars.$green;
+  margin: 1rem 0 2rem;
+  letter-spacing: -0.02em;
+  -webkit-font-smoothing: subpixel-antialiased;
+}
+
+h1,.h1-size {
+  font-size: vars.$font-h1-size;
+  line-height: vars.$font-small-line-height;
+  text-transform:none;
+  font-family: Replica-Pro-Bold, Helvetica, Arial, sans-serif;
+}
+
+h2,.h2-size {
+  font-size: vars.$font-h2-size;
+  line-height: vars.$font-small-line-height;
+  text-transform:none;
+  font-weight: vars.$font-bold;
+  color: vars.$grey-dark;
+}
+
+h3,.h3-size {
+  font-size: vars.$font-h2-size;
+  line-height: vars.$font-small-line-height;
+  text-transform:none;
+  font-weight: vars.$font-bold;
+  font-family: Replica-Pro-Light, Helvetica, Arial, sans-serif;
+  color: vars.$green;
+}
+
+h4,.h4-size {
+  font-size: vars.$font-h4-size;
+  line-height: vars.$font-line-height;
+  text-transform:none;
+  font-weight: vars.$font-bold;
+}
+
+h5,.h5-size {
+  font-size: vars.$font-h5-size;
+  line-height: vars.$font-line-height;
+  text-transform:none;
+  font-weight: vars.$font-bold;
+}
+
+.h1-alt {
+  font-size: 26px;
+  color: vars.$grey-dark;
+}
+
+h1,h2,h3,h4,h5 {
+  a {
+    color:inherit;
+  }
+}
+
+p {
+  margin: 1rem 0;
+
+  &.intro {
+    font-size: 16px;
+    line-height: 23px;
+
+    // max-width: 500px;
+    margin: 1rem auto;
+  }
+}
+
+strong {
+  font-weight: bold;
+}
+
+small {
+  font-size: 80%;
+}
+
+sup {
+  position: relative;
+  top: -0.5em;
+  font-size: 80%;
+}
+
+.text-center {
+  text-align: center;
+
+  p {
+    text-align: center;
+  }
+}
+
+.text-center-mobile {
+  @media (max-width: vars.$screen-xs-max) {
+    text-align: center;
+
+    p {
+      text-align: center;
+    }
+  }
+}
