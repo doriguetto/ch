@@ -4,10 +4,10 @@ import path from 'path';
 import { globSync } from 'glob';
 import { fileURLToPath } from 'url';
 import { PreRenderedAsset } from 'rollup';
+import svgr from 'vite-plugin-svgr';
 import baseConfig from './vite.config';
-import svgr from "vite-plugin-svgr";
 
-const inputFiles = globSync('src/**/*.{ts,js,tsx}', {
+const inputFiles = globSync('src/**/*.{js,tsx}', {
   ignore: ['src/**/*.test.ts'],
 });
 
@@ -29,11 +29,11 @@ const input = Object.fromEntries(
 );
 
 export default mergeConfig(baseConfig, defineConfig({
-    plugins: [
-        svgr(),
-    ],
-    base: "/blocks/", // 👈 ensures both dev + prod URLs start with /blocks/
-    build: {
+  plugins: [
+    svgr(),
+  ],
+  base: '/blocks/',
+  build: {
     sourcemap: !process.env.BUILD_PRODUCTION,
     minify: !!process.env.BUILD_PRODUCTION,
     cssMinify: !!process.env.BUILD_PRODUCTION,

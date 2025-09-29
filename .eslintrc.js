@@ -1,7 +1,7 @@
 module.exports = {
   root: true,
   extends: [
-    'airbnb-base',
+    // 'airbnb-base',
     'plugin:json/recommended',
     'plugin:xwalk/recommended',
     'plugin:@typescript-eslint/recommended',
@@ -22,15 +22,6 @@ module.exports = {
   },
   plugins: ['@typescript-eslint', 'react', 'react-hooks'],
   rules: {
-    'import/extensions': [
-      'error',
-      'ignorePackages',
-      {
-        js: 'always',
-        ts: 'never',
-        tsx: 'never',
-      },
-    ],
     'linebreak-style': ['error', 'unix'],
     'no-param-reassign': [2, { props: false }],
   },

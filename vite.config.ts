@@ -12,7 +12,7 @@ export default defineConfig({
         lines: 80,
       },
       reporter: ['text', 'html', 'lcov'], // You can specify other formats like 'json' or 'clover' if needed.
-      include: ['src/**/*.{ts,js}'], // Include the source files for coverage.
+      include: ['src/**/*.{ts,js,tsx}'], // Include the source files for coverage.
       exclude: ['src/**/*.test.{ts,js}', 'setupTests.ts'], // Exclude test files or setup files from coverage.
     },
   },
