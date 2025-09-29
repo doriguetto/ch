@@ -1,3 +1,4 @@
+import React from "react";
 import {createRoot} from "react-dom/client";
 import {useState} from "react";
 import './app.scss'
@@ -7,5 +8,5 @@ const App = () => (
 )
 
 export default async function decorate(block: HTMLDivElement) {
-    createRoot(block).render(<App {...data} />)
+    createRoot(block).render(<App />)
 }
