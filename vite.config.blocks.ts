@@ -5,6 +5,7 @@ import { globSync } from 'glob';
 import { fileURLToPath } from 'url';
 import { PreRenderedAsset } from 'rollup';
 import baseConfig from './vite.config';
+import svgr from "vite-plugin-svgr";
 
 const inputFiles = globSync('src/**/*.{ts,js,tsx}', {
   ignore: ['src/**/*.test.ts'],
@@ -28,7 +29,11 @@ const input = Object.fromEntries(
 );
 
 export default mergeConfig(baseConfig, defineConfig({
-  build: {
+    plugins: [
+        svgr(),
+    ],
+    base: "/blocks/", // 👈 ensures both dev + prod URLs start with /blocks/
+    build: {
     sourcemap: !process.env.BUILD_PRODUCTION,
     minify: !!process.env.BUILD_PRODUCTION,
     cssMinify: !!process.env.BUILD_PRODUCTION,

@@ -4,19 +4,44 @@ module.exports = {
     'airbnb-base',
     'plugin:json/recommended',
     'plugin:xwalk/recommended',
+    'plugin:@typescript-eslint/recommended',
+    'plugin:react/recommended',
+    'plugin:react-hooks/recommended',
   ],
   env: {
     browser: true,
+    es2021: true,
   },
-  parser: '@babel/eslint-parser',
+  parser: '@typescript-eslint/parser',
   parserOptions: {
-    allowImportExportEverywhere: true,
+    ecmaVersion: 'latest',
     sourceType: 'module',
-    requireConfigFile: false,
+    ecmaFeatures: {
+      jsx: true, // enable JSX parsing
+    },
   },
+  plugins: ['@typescript-eslint', 'react', 'react-hooks'],
   rules: {
-    'import/extensions': ['error', { js: 'always' }], // require js file extensions in imports
-    'linebreak-style': ['error', 'unix'], // enforce unix linebreaks
-    'no-param-reassign': [2, { props: false }], // allow modifying properties of param
+    'import/extensions': [
+      'error',
+      'ignorePackages',
+      {
+        js: 'always',
+        ts: 'never',
+        tsx: 'never',
+      },
+    ],
+    'linebreak-style': ['error', 'unix'],
+    'no-param-reassign': [2, { props: false }],
+  },
+  settings: {
+    react: {
+      version: 'detect', // ✅ detects your installed React version
+    },
+    'import/resolver': {
+      node: {
+        extensions: ['.js', '.ts', '.tsx'],
+      },
+    },
   },
 };

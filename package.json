@@ -5,7 +5,7 @@
   "description": "Starter project for Adobe Helix",
   "scripts": {
     "aem-up": "aem up",
-    "lint:js": "eslint src/ --ext .json,.js,.mjs",
+    "lint:js": "eslint src/ --ext .json,.js,.mjs,.ts,.tsx",
     "lint:css": "stylelint src/**/*.scss",
     "lint": "npm run lint:js && npm run lint:css",
     "lint:fix": "npm run lint:js -- --fix && npm run lint:css -- --fix",
@@ -40,16 +40,21 @@
     "eslint-config-airbnb-base": "15.0.0",
     "eslint-plugin-import": "2.32.0",
     "eslint-plugin-json": "3.1.0",
+    "eslint-plugin-react": "^7.37.5",
+    "eslint-plugin-react-hooks": "^5.2.0",
     "eslint-plugin-xwalk": "github:adobe-rnd/eslint-plugin-xwalk#v0.1.3",
     "glob": "^11.0.3",
     "husky": "9.1.1",
     "merge-json-cli": "1.0.4",
     "npm-run-all": "^4.1.5",
-    "react": "^19.1.1",
-    "react-dom": "^19.1.1",
     "sass-embedded": "^1.93.2",
     "stylelint": "^16.24.0",
     "stylelint-config-standard-scss": "^16.0.0",
-    "vite": "^7.1.7"
+    "vite": "^7.1.7",
+    "vite-plugin-svgr": "^4.5.0"
+  },
+  "dependencies": {
+    "react": "^19.1.1",
+    "react-dom": "^19.1.1"
   }
 }
